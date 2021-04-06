@@ -1,5 +1,7 @@
 # Disaster Response Pipeline Project
 
+This first run is a minimum viable product. Additional features can be added as necessary. It is intended to showcase the art of the possible. 
+
 ### Install
 This project uses the following libraries. All libraries are part of Anaconda: 
 
