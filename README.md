@@ -1,5 +1,19 @@
 # Disaster Response Pipeline Project
 
+### Install
+This project uses the following libraries. All libraries are part of Anaconda: 
+
+- sys
+- pandas
+- sqlalchemy
+- re
+- nltk
+- sqlalchemy
+- sklearn
+- pickle
+- flask
+- ploty
+
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
