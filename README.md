@@ -55,7 +55,7 @@ The class-by-class scoring is represented in the table below. The "occured" colu
 
 True Postive + False Positive represents the workload of messages results which must be processed. False Negative represents the risk of missing something that is actually important. Determining the viability of this model is dependent upon the business case. If it is imperative that istances are not missed, recall will becomes the most important metric but will likely increase the false positive rate for that label and precision will suffer. This might be acceptable if the cost for processing false positives is relatively low. If resources are limited or the cost of handling positive results is high, accuracy would be be a better measure as this reduces the number of false positives, but likely also reduces the model's sensitivity and also increases the risk of something important being missed. 
 
-|                         | precision | recall | f1-score | occured  |
+|           label         | precision | recall | f1-score | occured  |
 | :---------------------- | :-----: | :------: | :------: | :------: |
 |             related     |  0.84   |   0.93   |   0.88   |   3977   |
 |              request    |  0.84   |   0.44   |   0.58   |    869   |
