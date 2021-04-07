@@ -6,6 +6,7 @@
     + [Description](#description)
     + [Instructions](#instructions-)
     + [Data analysis and issues](#data-analysis-and-issues)
+    + [Model Perfomance](#model_performance)
 
 ### Install 
 This project uses the following libraries. All libraries are part of <a href='https://anaconda.org/'>Anaconda</a>: 
@@ -45,11 +46,17 @@ This project is executed in three segments:
 ### Data analysis and issues
 * This data has significant imbalances in the tag types. These imbalances makes it very difficult to pull relevant discriminatory attributes to identify those under-represented message types. It is very difficult for machine learning--which relies on examining many examples--to create the necessary selection criteria to identify these classes. If possible, it would be best to add additional observations to the initial dataset to help build a proper classifier. As it is not possible to go back to the data provider for additional examples we are limited to the data we have on hand. To compensate for this, I tried the following: 
     - **class_weight:** This <a href='https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html'>RandomForrestClassifier</a> class_weight hyper-parameter has an option called **'balanced'** which weights the value of examples inversely proportional to class frequencies in the input data as defined by the equation n_samples / (n_classes X np.bincount(y)). In our specific case, the highest scoring model used class_weight=None meaning no effort was made in this MVP model to account for imbalances in the class. 
-    - **model performance:** The class-by-class scoring is represented in the table below:
 
+### Model Performance
+The class-by-class scoring is represented in the table below. The "occured" column lists the number of times that tag occurred in the dataset provided. In those instances where there are no examples, we would expect no score.
+    - **precision:** represents the accuracy of true predictions for that category type, AKA the TRUE POSITIVE RATE. For instance, with 'water", when we predict the message is related to water, we are correct 88% of the time.
+    - **recall:** the ability of the model to identify all the positive sameples in the Test data. For instance, with water, we know there are 350 samples in the TEST corpus and we only identify 12% of them. This is sometimes called "sensitivity". 
+    - **F1-score** represents a balance between precision and recall. The higher the score, the more accurate & sensitive the model is to that label. 
 
-|                       | precision   | recall | f1-score  | support |
-|---|---|---|---|--|
+True Postive + False Positive represents the workload of messages results which must be processed. False Negative represents the risk of missing something that is actually important. Determining the viability of this model is dependent upon the business case. If it is imperative that istances are not missed, recall will becomes the most important metric but will likely increase the false positive rate for that label and precision will suffer. This might be acceptable if the cost for processing false positives is relatively low. If resources are limited or the cost of handling positive results is high, accuracy would be be a better measure as this reduces the number of false positives, but likely also reduces the model's sensitivity and also increases the risk of something important being missed. 
+
+|                         | precision | recall | f1-score | occured  |
+| :---------------------- | :-----: | :------: | :------: | :------: |
 |             related     |  0.84   |   0.93   |   0.88   |   3977   |
 |              request    |  0.84   |   0.44   |   0.58   |    869   |
 |                offer    |  0.00   |   0.00   |   0.00   |     18   |
@@ -84,7 +91,8 @@ This project is executed in three segments:
 |                 fire    |  0.00   |   0.00   |   0.00   |     44   |
 |           earthquake    |  0.88   |   0.40   |   0.55   |    472   |
 |                 cold    |  1.00   |   0.01   |   0.02   |    115   |
-|        other_weather    |  0.67  |    0.01   |   0.02   |    261   |
-|        direct_report    |  0.78  |    0.32   |   0.46   |   1010   |
-|---|---|---|---|--|
-|          avg / total    |  0.75  |    0.43   |   0.48   |  16358   |
+|        other_weather    |  0.67   |   0.01   |   0.02   |    261   |
+|        direct_report    |  0.78   |   0.32   |   0.46   |   1010   |
+|          avg / total    |  0.75   |   0.43   |   0.48   |  16358   |
+
+
