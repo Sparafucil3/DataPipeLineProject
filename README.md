@@ -1,5 +1,12 @@
 # Disaster Response Pipeline Project
 
+- [Disaster Response Pipeline Project](#disaster-response-pipeline-project)
+    + [Install](#install)
+    + [Why this project](#why-this-project)
+    + [Description](#description)
+    + [Instructions:](#instructions-)
+    + [Data analysis and issues:](#data-analysis-and-issues-)
+
 ### Install 
 This project uses the following libraries. All libraries are part of <a href='https://anaconda.org/'>Anaconda</a>: 
 - sys
