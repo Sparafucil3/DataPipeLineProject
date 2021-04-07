@@ -45,4 +45,46 @@ This project is executed in three segments:
 ### Data analysis and issues
 * This data has significant imbalances in the tag types. These imbalances makes it very difficult to pull relevant discriminatory attributes to identify those under-represented message types. It is very difficult for machine learning--which relies on examining many examples--to create the necessary selection criteria to identify these classes. If possible, it would be best to add additional observations to the initial dataset to help build a proper classifier. As it is not possible to go back to the data provider for additional examples we are limited to the data we have on hand. To compensate for this, I tried the following: 
     - **class_weight:** This <a href='https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html'>RandomForrestClassifier</a> class_weight hyper-parameter has an option called **'balanced'** which weights the value of examples inversely proportional to class frequencies in the input data as defined by the equation n_samples / (n_classes X np.bincount(y)). In our specific case, the highest scoring model used class_weight=None meaning no effort was made in this MVP model to account for imbalances in the class. 
-    - **model performance:** The class-by-class scoring is represented in the table below. 
+    - **model performance:** The class-by-class scoring is represented in the table below:
+
+
+|                       | precision   | recall | f1-score  | support |
+|---|---|---|---|--|
+|             related     |  0.84   |   0.93   |   0.88   |   3977   |
+|              request    |  0.84   |   0.44   |   0.58   |    869   |
+|                offer    |  0.00   |   0.00   |   0.00   |     18   |
+|          aid_related    |  0.74   |   0.55   |   0.63   |   2090   |
+|         medical_help    |  0.59   |   0.07   |   0.12   |    393   |
+|     medical_products    |  0.67   |   0.07   |   0.13   |    260   |
+|    search_and_rescue    |  1.00   |   0.01   |   0.01   |    146   |
+|             security    |  0.00   |   0.00   |   0.00   |     97   |
+|             military    |  0.83   |   0.03   |   0.05   |    185   |
+|          child_alone    |  0.00   |   0.00   |   0.00   |      0   |
+|                water    |  0.88   |   0.12   |   0.21   |    350   |
+|                 food    |  0.85   |   0.29   |   0.43   |    573   |
+|              shelter    |  0.83   |   0.12   |   0.21   |    450   |
+|             clothing    |  0.57   |   0.05   |   0.09   |     80   |
+|                money    |  1.00   |   0.03   |   0.06   |    128   |
+|       missing_people    |  0.00   |   0.00   |   0.00   |     64   |
+|             refugees    |  0.00   |   0.00   |   0.00   |    162   |
+|                death    |  0.68   |   0.06   |   0.11   |    213   |
+|            other_aid    |  0.47   |   0.03   |   0.05   |    652   |
+|infrastructure_related   |  0.80   |   0.01   |   0.02   |    362   |
+|             transport   |  0.33   |   0.01   |   0.02   |    245   |
+|             buildings   |  0.76   |   0.05   |   0.10   |    256   |
+|           electricity   |  1.00   |   0.02   |   0.04   |    100   |
+|                 tools   |  0.00   |   0.00   |   0.00   |     31   |
+|            hospitals    |  0.00   |   0.00   |   0.00   |     59   |
+|                shops    |  0.00   |   0.00   |   0.00   |     24   |
+|          aid_centers    |  0.00   |   0.00   |   0.00   |     63   |
+| other_infrastructure    |  0.33   |   0.00   |   0.01   |    248   |
+|      weather_related    |  0.80   |   0.53   |   0.64   |   1437   |
+|               floods    |  0.92   |   0.19   |   0.32   |    451   |
+|                storm    |  0.70   |   0.21   |   0.32   |    473   |
+|                 fire    |  0.00   |   0.00   |   0.00   |     44   |
+|           earthquake    |  0.88   |   0.40   |   0.55   |    472   |
+|                 cold    |  1.00   |   0.01   |   0.02   |    115   |
+|        other_weather    |  0.67  |    0.01   |   0.02   |    261   |
+|        direct_report    |  0.78  |    0.32   |   0.46   |   1010   |
+|---|---|---|---|--|
+|          avg / total    |  0.75  |    0.43   |   0.48   |  16358   |
