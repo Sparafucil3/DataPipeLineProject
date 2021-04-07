@@ -10,16 +10,16 @@
 <a name='Install'/>
 ### Install 
 This project uses the following libraries. All libraries are part of Anaconda: 
-- sys
-- pandas
-- sqlalchemy
-- re
-- nltk
-- sqlalchemy
-- sklearn
-- pickle
-- flask
-- ploty
+* sys
+* pandas
+* sqlalchemy
+* re
+* nltk
+* sqlalchemy
+* sklearn
+* pickle
+* flask
+* ploty
 
 All code in the project was created with Python 3.6.3
 
