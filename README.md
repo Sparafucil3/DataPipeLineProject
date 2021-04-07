@@ -103,4 +103,5 @@ True Postive + False Positive represents the workload of messages results which 
 * Add more hyper-parameters to the GridSearchCV function to see if a better preforming model might be identified. I did not do this for this MVP as the time to run the training script is already measured in minutes and each option added increased the time to run. I am already concerned other practicioners will exit out before the model selection process is finished. 
 * Try to balance out the data somehow, perhaps with re-sampling or shaping the training data. In an ideal world, we would work with the provided to get a more balanced sample for learning purposes. At the very least, it would be nice to know which tags are most important and measure the model's performance against those tags. 
 
-Questions or comments can be directed to the author. 
+
+# Questions or comments can be directed to the author. 
