@@ -6,7 +6,7 @@
     + [Description](#description)
     + [Instructions](#instructions-)
     + [Data analysis and issues](#data-analysis-and-issues)
-    + [Model Perfomance](#model_performance)
+    + [Model Performance](#model_performance)
 
 ### Install 
 This project uses the following libraries. All libraries are part of <a href='https://anaconda.org/'>Anaconda</a>: 
