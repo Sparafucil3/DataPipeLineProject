@@ -7,7 +7,7 @@
     + [Instructions](#instructions-)
     + [Data analysis and issues](#data-analysis-and-issues)
     + [Model Performance](#model-performance)
-    + [Future Opportunities](#furture-opportunities)
+    + [Future Opportunities](#future-opportunities)
 
 ### Install 
 This project uses the following libraries. All libraries are part of <a href='https://anaconda.org/'>Anaconda</a>: 
