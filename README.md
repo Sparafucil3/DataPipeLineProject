@@ -1,7 +1,5 @@
 # Disaster Response Pipeline Project
 
-This first run is a minimum viable product (MVP). Additional features can be added as necessary. It is intended to showcase the art of the possible. 
-
 #### Table of Contents
 [Install](#Install)
 [Why this project](#Why)
@@ -28,7 +26,7 @@ All code in the project was created with Python 3.6.3
 
 <a name='Why'/>
 ### Why this project
-This project fulfills exercise 2 for the <a href='https://www.udacity.com/course/data-scientist-nanodegree--nd025'>Udacity Data Science</a> Nano Degree program. This program is based on data provided by <a href='https://appen.com/'>Figure Eight</a>. The data contains a corpus of tagged messages related to disasters I used to create a model categorizing those messages to create a web app for real-time categorization of new messages. The web app also provides some limitted visualiztions of the data. 
+This project fulfills exercise 2 for the <a href='https://www.udacity.com/course/data-scientist-nanodegree--nd025'>Udacity Data Science</a> Nano Degree program. This program is based on data provided by <a href='https://appen.com/'>Figure Eight</a>. The data contains a corpus of tagged messages related to disasters I used to create a model categorizing those messages to create a web app for real-time categorization of new messages. The web app also provides some limitted visualiztions of the data. This first run is a minimum viable product (MVP). Additional features can be added as necessary. It is intended to showcase the art of the possible. 
 
 <a name='Description'/>
 ### Description
