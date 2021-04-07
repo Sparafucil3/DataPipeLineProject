@@ -8,7 +8,7 @@
 5. [Data Analysis](#Data)
 
 <a name='Install'/>
-### Install
+### Install 
 This project uses the following libraries. All libraries are part of Anaconda: 
 
 - sys
@@ -25,12 +25,12 @@ This project uses the following libraries. All libraries are part of Anaconda:
 All code in the project was created with Python 3.6.3
 
 <a name='Why'/>
-### Why this project
+### Why this project 
 This project fulfills exercise 2 for the <a href='https://www.udacity.com/course/data-scientist-nanodegree--nd025'>Udacity Data Science</a> Nano Degree program. This program is based on data provided by <a href='https://appen.com/'>Figure Eight</a>. The data contains a corpus of tagged messages related to disasters I used to create a model categorizing those messages to create a web app for real-time categorization of new messages. The web app also provides some limitted visualiztions of the data. This first run is a minimum viable product (MVP). Additional features can be added as necessary. It is intended to showcase the art of the possible.
 
 
 <a name='Description'/>
-### Description
+### Description 
 This project is executed in three segments: 
 
 1. <a href='https://github.com/Sparafucil3/DataPipeLineProject/blob/master/data/process_data.py'>process_data.py</a>: This script expects two input files with a common "id" field, one containing messages and one containing categories. It ingests the files, merges them, cleans the data to prepare it for Machine Learning, and then stores it in a SQLite database table named "CleanedMessages".
@@ -39,7 +39,7 @@ This project is executed in three segments:
 
 
 <a name='Instructions'/>
-### Instructions:
+### Instructions: 
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
@@ -54,7 +54,7 @@ This project is executed in three segments:
 
 
 <a name='Data'/>
-# Data
+# Data 
 * This data has significant imbalances in the tag types. These imbalances makes it very difficult to pull relevant discriminatory attributes to identify those under-represented message types. It is very difficult for machine learning--which relies on examining many examples--to create the necessary selection criteria to identify these classes. If possible, it would be best to add additional observations to the initial dataset to help build a proper classifier. As it is not possible to go back to the data provider for additional examples we are limited to the data we have on hand. To compensate for this, I tried the following: 
     - **class_weight:** This <a href='https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html'>RandomForrestClassifier</a> **class_weight** hyper-parameter has an option called **'balanced'** which weights the value of examples inversely proportional to class frequencies in the input data as defined by the equation n_samples / (n_classes * np.bincount(y)). In our specific case, the highest scoring model used **class_weight=None** meaning no effort was made in this MVP model to account for imbalances in the class. 
     - **model performance:** The class-by-class scoring is represented in the table below. 
