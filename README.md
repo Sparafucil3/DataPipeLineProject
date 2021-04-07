@@ -1,6 +1,6 @@
 # Disaster Response Pipeline Project
 
-#### Table of Contents
+### Table of Contents
 1. [Install](#Install)
 2. [Why this project](#Why)
 3. [Description](#Description)
