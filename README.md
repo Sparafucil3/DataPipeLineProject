@@ -49,9 +49,9 @@ This project is executed in three segments:
 
 ### Model Performance
 The class-by-class scoring is represented in the table below. The "occured" column lists the number of times that tag occurred in the dataset provided. In those instances where there are no examples, we would expect no score.
-    - **precision:** represents the accuracy of true predictions for that category type, AKA the TRUE POSITIVE RATE. For instance, with 'water", when we predict the message is related to water, we are correct 88% of the time.
-    - **recall:** the ability of the model to identify all the positive sameples in the Test data. For instance, with water, we know there are 350 samples in the TEST corpus and we only identify 12% of them. This is sometimes called "sensitivity". 
-    - **F1-score** represents a balance between precision and recall. The higher the score, the more accurate & sensitive the model is to that label. 
+- **precision:** represents the accuracy of true predictions for that category type, AKA the TRUE POSITIVE RATE. For instance, with 'water", when we predict the message is related to water, we are correct 88% of the time.
+- **recall:** the ability of the model to identify all the positive sameples in the Test data. For instance, with water, we know there are 350 samples in the TEST corpus and we only identify 12% of them. This is sometimes called "sensitivity". 
+- **F1-score** represents a balance between precision and recall. The higher the score, the more accurate & sensitive the model is to that label. 
 
 True Postive + False Positive represents the workload of messages results which must be processed. False Negative represents the risk of missing something that is actually important. Determining the viability of this model is dependent upon the business case. If it is imperative that istances are not missed, recall will becomes the most important metric but will likely increase the false positive rate for that label and precision will suffer. This might be acceptable if the cost for processing false positives is relatively low. If resources are limited or the cost of handling positive results is high, accuracy would be be a better measure as this reduces the number of false positives, but likely also reduces the model's sensitivity and also increases the risk of something important being missed. 
 
