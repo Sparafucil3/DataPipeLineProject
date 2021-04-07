@@ -7,17 +7,9 @@
 4. [Instructions](#Instructions)
 5. [Data Analysis](#Data)
 
-
-
 <a name='Install'/>
-### Install
-
-
-
-
-###Install 
+### Install 
 This project uses the following libraries. All libraries are part of Anaconda: 
-
 - sys
 - pandas
 - sqlalchemy
