@@ -33,7 +33,7 @@ This project fulfills exercise 2 for the <a href='https://www.udacity.com/course
 This project is executed in three segments: 
 
 1. <a href='https://github.com/Sparafucil3/DataPipeLineProject/blob/master/data/process_data.py'>process_data.py</a>: This script expects two input files with a common "id" field, one containing messages and one containing categories. It ingests the files, merges them, cleans the data to prepare it for Machine Learning, and then stores it in a SQLite database table named "CleanedMessages".
-2. <a href='https://github.com/Sparafucil3/DataPipeLineProject/blob/master/models/train_classifier.py'>train_classifier.py</a>: This script loads data from the SQLite DB created in step 1. It builds a Pipeline and a GridSearchCV to optimize finding the best RandomForrestClassifier possible. I picked a RandomForrestClassifier as it seems a best fit for this MVP. **WARNING:** the step "Training model" will take some time to execute. There is a lot going on in this step.
+2. <a href='https://github.com/Sparafucil3/DataPipeLineProject/blob/master/models/train_classifier.py'>train_classifier.py</a>: This script loads data from the SQLite DB created in step 1. It builds a Pipeline and a GridSearchCV to optimize finding the best RandomForrestClassifier possible. I picked a RandomForrestClassifier as it seems a best fit for this MVP. WARNING: the step "Training model" will take some time to execute. There is a lot going on in this step.
 3. Lastly, this project contains a small, lightweight Flask app for deployment to a web-server.
 
 
