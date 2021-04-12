@@ -106,5 +106,6 @@ True Postive + False Positive represents the workload of messages results which 
 
 ### Issues:
 * The classifier.pkl file is larger than the default allowed by github. Install 'lfs" on the git command line. You may need to resolve issues if you had the pkl file previously in your git repo. See this <a href='https://stackoverflow.com/questions/33330771/git-lfs-this-exceeds-githubs-file-size-limit-of-100-00-mb'>link</a> for options. 
+* Differences between the Udacity and Google App Engine are found in the <a href='https://github.com/Sparafucil3/DataPipeLineProject/blob/master/app/enviromental%20differences.txt'>evnrionmental differences</a> file. These difference required recompilation of the pkl file in an updated environment to work properly. 
 
 # Questions or comments can be directed to the author. 
