@@ -8,6 +8,7 @@
     + [Data analysis and issues](#data-analysis-and-issues)
     + [Model Performance](#model-performance)
     + [Future Opportunities](#future-opportunities)
+    + [Issues](#issues)
 
 ### Install 
 This project uses the following libraries. All libraries are part of <a href='https://anaconda.org/'>Anaconda</a>: 
@@ -103,5 +104,7 @@ True Postive + False Positive represents the workload of messages results which 
 * Add more hyper-parameters to the GridSearchCV function to see if a better preforming model might be identified. I did not do this for this MVP as the time to run the training script is already measured in minutes and each option added increased the time to run. I am already concerned other practicioners will exit out before the model selection process is finished. 
 * Try to balance out the data somehow, perhaps with re-sampling or shaping the training data. In an ideal world, we would work with the provided to get a more balanced sample for learning purposes. At the very least, it would be nice to know which tags are most important and measure the model's performance against those tags. 
 
+### Issues:
+* The classifier.pkl file is larger than the default allowed by github. Install 'lfs" on the git command line. You may need to resolve issues if you had the pkl file previously in your git repo. See this <a href='https://stackoverflow.com/questions/33330771/git-lfs-this-exceeds-githubs-file-size-limit-of-100-00-mb'>link</a> for options. 
 
 # Questions or comments can be directed to the author. 
