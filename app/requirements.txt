@@ -1,5 +1,5 @@
-plotly
-pandas
-nltk
-flask
-sklearn
+Plotly==4.14.3
+Pandas==1.2.3
+NLTK==3.5
+Flask==1.1.2
+Sklearn==0.24.1
