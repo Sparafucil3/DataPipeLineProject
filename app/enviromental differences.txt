@@ -1,0 +1,26 @@
+I found these differences between the Udacity virtual environment and my 
+desktop/Google App Engine. This lead to some deployment woes. For instance, 
+by default, the run.py attempts to import joblib from sklearn.externals. 
+This method was deprecated some time ago. When I attempted to deploy, the
+Google App Engine couldn't find this and the pickle file deployed from 
+Udacity's virtual environment wouldn't work. I had to re-compile on my 
+home computer and deploy that version. 
+
+All of that is a lot of words to say "Udacity, I think it's time to 
+upgrade your virtual environment."
+
+Udacity's virtual environment: 
+Python 3.6.3
+ploty 2.0.15
+nktk 3.2.5
+sklearn 0.19.1
+flask 0.12.5
+pandas 0.23.3
+
+Home desktop environment:
+Python 3.8.8
+plotly 4.14.3
+nltk 3.5
+sklearn 0.24.1
+flask 1.1.2
+pandas 1.2.3
